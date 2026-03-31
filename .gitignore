@@ -1,0 +1,15 @@
+# Data
+data/
+*.csv
+*.zip
+
+# Models and Results
+results/
+checkpoints_by_episode/
+offline_ppo_logs/
+models/
+
+# Python caching
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
