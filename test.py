@@ -15,7 +15,6 @@ def _state_to_obs(state):
 import os
 
 df_test = pd.read_csv('data/cooked_test.csv')
-# Si el modelo está en la vieja ubicación (que ahora es data/) o en results/PPO/models:
 model_path = 'results/PPO/models/new_data_all1.zip'
 if not os.path.exists(model_path):
     model_path = 'data/original_PPO-2.zip'

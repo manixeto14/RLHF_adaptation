@@ -111,8 +111,6 @@ class RewardCheckpointCallback(BaseCallback):
         return True
 
 
-
-# Algoritmo en uso para organizar los resultados
 alg_name = "PPO"
 models_dir = f"results/{alg_name}/models/"
 logs_dir = f"results/{alg_name}/logs/"
