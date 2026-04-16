@@ -5,7 +5,7 @@ from all_obs_env import  InterfaceEnv
 
 
 # df = pd.read_csv(r'C:\Users\manex\OneDrive - Mondragon Unibertsitatea\Unibertsitatea\3.kurtsoa\Lana\Mixing-machine\Python\Version_9_txukuna\RLHF_adaptation\src\Synthetic_data\cooked_train.csv')
-df = pd.read_csv(r'C:\Users\manex\OneDrive - Mondragon Unibertsitatea\Unibertsitatea\3.kurtsoa\Lana\Mixing-machine\Python\Version_9_txukuna\RLHF_adaptation\src\df_train.csv')
+df = pd.read_csv(r'data/df_train.csv')
 env = InterfaceEnv(df)
 
 

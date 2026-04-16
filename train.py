@@ -28,7 +28,7 @@ import numpy as np
 #                 save_file = os.path.join(self.save_path, f"{self.name_prefix}_{self.episode_counter}_episodes")
 #                 self.model.save(save_file)
 #                 if self.verbose > 0:
-#                     print(f"✅ Modelo guardado en: {save_file}")
+#                     print(f"Modelo guardado en: {save_file}")
 #         return True
 
 # # Callback to log rewards into Tensorboard
@@ -68,7 +68,7 @@ import numpy as np
 #                     save_file = os.path.join(self.save_path, f"{self.name_prefix}_{self.episode_counter}_episodes")
 #                     self.model.save(save_file)
 #                     if self.verbose > 0:
-#                         print(f"✅ Modelo guardado en: {save_file}")
+#                         print(f"Modelo guardado en: {save_file}")
 #         return True
     
 
@@ -107,7 +107,7 @@ class RewardCheckpointCallback(BaseCallback):
                     save_file = os.path.join(self.save_path, f"{self.name_prefix}_{self.checkpoint_internal_counter}_episodes")
                     self.model.save(save_file)
                     if self.verbose > 0:
-                        print(f"✅ Model saved in: {save_file}")
+                        print(f"Model saved in: {save_file}")
         return True
 
 
