@@ -15,7 +15,8 @@ def get_reward(selection,state):
     for mix in Mix_count:
         if Mix_count[mix] > 1:
             if mix != Hidden_mix:
-                reward -= 30 #Penalize for showing the same mix more than once
+                # Penalize for EACH extra time the same mix is shown
+                reward -= 30 * (Mix_count[mix] - 1)
 
     reward += Mix_count[Hidden_mix]*1 # Reward for hiding mix
 

@@ -74,7 +74,7 @@ def main():
     # Vectorize
     env = DummyVecEnv([lambda: env])
 
-    name = 'ppo_builder_run1'
+    name = 'ppo_builder_run5'
 
     callback = RewardCheckpointCallback(    
         save_every_episodes=5000,
@@ -87,11 +87,11 @@ def main():
     try:
         model = PPO.load(os.path.join(models_dir, name), env=env)
         print("Loaded existing PPO model.")
-        model.learn(total_timesteps=300_000, callback=callback, reset_num_timesteps=False)
+        model.learn(total_timesteps=200_000, callback=callback, reset_num_timesteps=False)
     except Exception as e:
         print(f"Starting new PPO model. ({e})")
         # Ensure we use MultiInputPolicy for Dict observation spaces
-        model = PPO("MultiInputPolicy", env, n_steps=1024, verbose=1, tensorboard_log=logs_dir)
+        model = PPO("MultiInputPolicy", env, n_steps=1024, verbose=1, tensorboard_log=logs_dir, ent_coef=0.05)
         model.learn(total_timesteps=300_000, callback=callback, reset_num_timesteps=True)
 
     model.save(os.path.join(models_dir, name))

@@ -1,12 +1,12 @@
 import pandas as pd
 from gymnasium.spaces import Dict, Discrete, MultiDiscrete, Box
 import numpy as np
-from all_obs_env import  InterfaceEnv
+from builder_env import  BuilderInterfaceEnv
 
 
 # df = pd.read_csv(r'C:\Users\manex\OneDrive - Mondragon Unibertsitatea\Unibertsitatea\3.kurtsoa\Lana\Mixing-machine\Python\Version_9_txukuna\RLHF_adaptation\src\Synthetic_data\cooked_train.csv')
 df = pd.read_csv(r'data/df_train.csv')
-env = InterfaceEnv(df)
+env = BuilderInterfaceEnv(df)
 
 
 obs, info = env.reset()
